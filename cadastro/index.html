@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main class="flex items-center justify-center min-h-screen bg-gray-100"> 
+        <section class="flex flex-col items-center justify-center bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+            <h1 class="font-bold">Crie sua conta</h1>
+            <p>preencha os dados abaixo para começar</p>
+            <form class="flex flex-col w-full mt-4" action="" method="POST">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Eu concordo com os termos de uso</label>
+
+                <button type="submit">Criar conta</button>
+            </form>
+
+            <p>Já tem uma conta?</p>
+            <a href="">Entrar</a>
+
+        </section>
+    </main>
+</body>
+</html>
