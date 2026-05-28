@@ -4,6 +4,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/index.min.js"></script>
     <title>Cadastro</title>
   </head>
 
@@ -11,9 +13,78 @@
     <main class="flex items-center justify-center min-h-screen p-6">
       <div class="flex w-full max-w-5xl overflow-hidden rounded-2xl shadow-xl">
         <!-- LADO ESQUERDO -->
-        <section class="hidden md:flex md:w-1/2 bg-zinc-100 p-12">
-          <div class="flex flex-col justify-between w-full"></div>
+        
+         <section class="esquerda bg-[#f2efe9] p-10 md:p-16 md:w-1/2 flex flex-col justify-between">
+            <div class="top"> Logo </div>
+
+            <div class="meio">
+                <h1 class=" text-4xl  text-gray-900">
+                    Comece gratís <br> em 1 minuto
+                </h1>
+                <p class="text-gray-600 mt-5 mb-5">Crie sua conta e explore todas as funcionalidades sem custo no
+                    primeiro
+                    <br> mês.
+                </p>
+
+                <span class="icones flex flex-col gap-2">
+
+                    <div class="icone flex items-center gap-3">
+                        <div class="bg-blue-50 flex items-center justify-center">
+                            <i class="fa-solid fa-rocket text-xl text-blue-500"></i>
+                        </div>
+                        <div class="flex flex-col">
+
+                            <h2>
+                                Setup rápido
+                            </h2>
+                            <p class="text-gray-600">Configure tudo em poucos clicks, sem complicação técnica.</p>
+                        </div>
+                    </div>
+                    <div class="icone flex items-center gap-3">
+                        <div class="bg-blue-50 flex items-center justify-center">
+                            <i class="ph ph-shield-check text-2xl text-blue-500"></i>
+
+                        </div>
+                        <div class="flex flex-col">
+                            <h2 class="">
+                                Dados seguros
+                            </h2>
+                            <p class="text-gray-600 ">
+                                Criptografia ponta a ponta em todas as informações.</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="icone flex items-center gap-3">
+                        <div class="bg-blue-50 flex items-center justify-center">
+                            <i class="fa-regular fa-headphones text-xl text-blue-500"></i>
+                        </div class="flex flex-col">
+
+                        <div>
+                            <h2>
+                                Suporte 24/7
+                            </h2>
+                            <p class="text-gray-600">
+                                Atendimento humano sempre que você precisar.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </span>
+            </div>
+
+            <footer class="fim flex align-end">
+                <div>
+                    <i class="fa-solid fa-star text-yellow-300"></i>
+                </div>
+                <p>4.9/5 com mais de 10 mil avaliações</p>
+
+            </footer>
+
         </section>
+        
 
         <!-- LADO DIREITO -->
         <section class="w-full md:w-1/2 bg-white p-10 md:p-14">
