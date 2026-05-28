@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -8,180 +8,105 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Screen</title>
 </head>
 
 <body class="bg-white flex items-center justify-center w-full min-h-screen">
 
-  <main class="flex w-full min-h-screen justify-center items-center bg-[#ECE9E0]">
-    <!-- 
-       min-h-screen no lugar de h-screen/h-full
-      h-full depende do pai ter altura definida. min-h-screen garante
-      que a main sempre ocupe pelo menos a tela inteira, 
-      mesmo quando o conteúdo for maior em mobile.
-    -->
+    <main class="flex w-full min-h-screen justify-center items-center bg-[#ECE9E0]">
+        <div class="flex flex-col md:flex-row items-stretch md:max-w-[70%] rounded-xl overflow-hidden shadow-md ">
 
-    <div class="flex flex-col md:flex-row items-stretch md:max-w-[70%] rounded-xl overflow-hidden shadow-md ">
-      <!-- 
-         flex-col → md:flex-row
-        No mobile as sections ficam empilhadas (coluna).
-        A partir de 768px voltam a ficar lado a lado (linha).
+            <section class="bg-[#dedede] hidden md:flex w-full md:w-1/2 justify-center">
 
-         w-full → md:max-w-[70%]
-        No mobile ocupa a tela toda. No desktop limita a 70%.
+                <div class="flex flex-col w-[90%] justify-center py-10">
 
-         removido h-[80%] fixo
-        Altura fixa quebra em mobile. Agora cresce conforme o conteúdo.
-      -->
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 bg-black"></div>
+                        <p class="text-base">Logo</p>
+                    </div>
 
-      <section class="bg-[#dedede] hidden md:flex w-full md:w-1/2 justify-center">
-        <!-- 
-           hidden md:flex
-          No mobile essa section some completamente (hidden).
-          No desktop ela aparece como flex (md:flex).
-          É um padrão comum: em tela pequena só o form importa.
+                    <div class="flex flex-col gap-5 pt-20">
+                        <h2 class="text-2xl">Bem-vindo <br>de volta 👋</h2>
+                        <p>Acesse sua conta para continuar de onde parou e acompanhar tudo em um só lugar.</p>
+                    </div>
 
-          ALTERAÇÃO 6: w-full md:w-1/2
-          No mobile ocupa largura total. No desktop ocupa metade.
-        -->
+                    <div class="text-xl mt-10">
+                        <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Seus dados protegidos com criptografia</p>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Acesso em qualquer dispositivo</p>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Sincronização automática em tempo real</p>
+                        </div>
+                    </div>
 
-        <div class="flex flex-col w-[90%] justify-center py-10">
-          <!-- 
-             py-10 adicionado
-            Garante espaçamento vertical interno mesmo sem altura fixa.
-          -->
+                    <p class="text-sm mt-20">© 2026 Sua Empresa</p>
+                </div>
+            </section>
 
-          <div class="flex items-center gap-2">
-            <div class="w-6 h-6 bg-black"></div>
-            <p class="text-[1rem]">Logo</p>
-          </div>
+            <section class="bg-white w-full md:w-1/2 flex flex-col items-center justify-center py-10">
 
-          <div class="flex flex-col gap-5 pt-20">
-            <h2 class="text-2xl">Bem-vindo <br>de volta 👋</h2>
-            <p>Acesse sua conta para continuar de onde parou e acompanhar tudo em um só lugar.</p>
-          </div>
+                <div class="mb-6 w-full px-8 flex flex-col gap-1">
+                    <h2 class="text-2xl">Entrar na sua conta</h2>
+                    <p class="text-sm text-gray-500">Use suas credenciais cadastradas para continuar.</p>
+                </div>
 
-          <div class="text-xl mt-10">
-            <div class="flex gap-2 items-center">
-              <i class="fa-solid fa-check"></i>
-              <p>Seus dados protegidos com criptografia</p>
-            </div>
-            <div class="flex gap-2 items-center">
-              <i class="fa-solid fa-check"></i>
-              <p>Acesso em qualquer dispositivo</p>
-            </div>
-            <div class="flex gap-2 items-center">
-              <i class="fa-solid fa-check"></i>
-              <p>Sincronização automática em tempo real</p>
-            </div>
-          </div>
+                <form action="" class="flex flex-col w-full px-8 gap-4">
 
-          <p class="text-sm mt-20">© 2026 Sua Empresa</p>
+                    <div class="flex flex-col gap-1">
+                        <label for="email" class="text-sm">E-mail</label>
+                        <input
+                            class="border border-gray-300 rounded-md px-3 py-2 w-full text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+                            type="email" placeholder="seu@email.com" id="email">
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+
+                        <div class="flex justify-between">
+                            <label for="pass" class="text-sm">Senha</label>
+                            <a class="text-blue-500 text-sm" href="#">Esqueceu?</a>
+                        </div>
+                        <input
+                            class="border border-gray-300 rounded-md px-3 py-2 w-full text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+                            type="password" placeholder="••••••••" id="pass">
+
+
+                    </div>
+
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" id="lembra">
+                        <label class="text-xs text-gray-600" for="lembra">Lembrar de mim por 30 dias</label>
+                    </div>
+
+                    <button class="text-white bg-black w-full py-2.5 rounded-md text-sm font-medium hover:bg-gray-400"
+                        type="submit">
+                        Entrar
+                    </button>
+
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1 h-[0.5px] bg-gray-300"></div>
+                        <span class="text-xs text-gray-400">OU</span>
+                        <div class="flex-1 h-[0.5px] bg-gray-300"></div>
+                    </div>
+
+                    <a href="#"
+                        class="hover:bg-black hover:text-white flex items-center justify-center gap-2 border border-gray-300 rounded-md py-2.5 w-full text-sm">
+                        ⊕ Continuar com Google
+                    </a>
+
+                    <p class="text-center text-sm text-gray-500">
+                        Não tem uma conta? <a class="text-blue-600" href="#">Cadastre-se</a>
+                    </p>
+
+                </form>
+            </section>
+
         </div>
-      </section>
-
-      <section class="bg-white w-full md:w-1/2 flex flex-col items-center justify-center py-10">
-        <!-- 
-          w-full md:w-1/2
-          Mesma lógica da section anterior. No mobile ocupa tudo,
-          no desktop divide o espaço com a section da esquerda.
-
-          ALTERAÇÃO: py-10 adicionado
-          Espaçamento vertical para quando a altura for automática.
-        -->
-
-        <div class="mb-6 w-full px-8 flex flex-col gap-1">
-          <!-- 
-          w-[350px] → w-full px-8
-            Largura fixa em px quebra em mobile.
-            w-full com px-8 (padding horizontal) é flexível e seguro.
-          -->
-          <h2 class="text-2xl">Entrar na sua conta</h2>
-          <p class="text-sm text-gray-500">Use suas credenciais cadastradas para continuar.</p>
-        </div>
-
-        <form action="" class="flex flex-col w-full px-8 gap-4">
-          <!-- 
-           w-[400px] → w-full px-8
-            Mesma lógica: largura fixa removida, controlamos
-            o espaço com padding horizontal.
-
-            A
-          -->
-
-          <div class="flex flex-col gap-1">
-            <label for="email" class="text-sm">E-mail</label>
-            <input
-              class="border border-gray-300 rounded-md px-3 py-2 w-full text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
-              type="email"
-              placeholder="seu@email.com"
-              id="email">
-          </div>
-
-          <div class="flex flex-col gap-1">
-            <!-- 
-          w-[90%] removido dos campos internos
-              Como o form agora é w-full com px-8, os filhos
-              não precisam mais de largura manual. w-full no input basta.
-            -->
-            <div class="flex justify-between">
-              <label for="pass" class="text-sm">Senha</label>
-              <a class="text-blue-500 text-sm" href="#">Esqueceu?</a>
-            </div>
-            <input
-              class="border border-gray-300 rounded-md px-3 py-2 w-full text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
-              type="password"
-              placeholder="••••••••"
-              id="pass">
-        
-            
-          </div>
-
-          <div class="flex gap-2 items-center">
-            <input type="checkbox" id="lembra">
-            <label class="text-xs text-gray-600" for="lembra">Lembrar de mim por 30 dias</label>
-          </div>
-
-          <button
-            class="text-white bg-black w-full py-2.5 rounded-md text-sm font-medium hover:bg-gray-400"
-            type="submit">
-            Entrar
-          </button>
-          <!-- 
-            ALTERAÇÃO: w-[90%] → w-full
-            O padding do form já controla o espaço lateral.
-            w-full aqui fica mais limpo e consistente.
-          -->
-
-          <div class="flex items-center gap-2">
-            <div class="flex-1 h-[0.5px] bg-gray-300"></div>
-            <span class="text-xs text-gray-400">OU</span>
-            <div class="flex-1 h-[0.5px] bg-gray-300"></div>
-          </div>
-          <!-- 
-            ALTERAÇÃO  w-[70%] → flex-1
-            flex-1 faz as linhas crescerem igualmente e preencherem
-            o espaço disponível, sem precisar de largura fixa.
-          -->
-
-          <a href="#"
-            class="hover:bg-black hover:text-white flex items-center justify-center gap-2 border border-gray-300 rounded-md py-2.5 w-full text-sm">
-            ⊕ Continuar com Google
-          </a>
-          <!-- 
-            ALTERAÇÃO w-[80%] → w-full
-            Mesma lógica dos outros elementos: padding do form
-            controla o espaço, w-full fica alinhado com os outros.
-          -->
-
-          <p class="text-center text-sm text-gray-500">
-            Não tem uma conta? <a class="text-blue-600" href="#">Cadastre-se</a>
-          </p>
-
-        </form>
-      </section>
-
-    </div>
-  </main>
+    </main>
 
 </body>
